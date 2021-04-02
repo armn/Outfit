@@ -77,7 +77,7 @@ function showSweater(event) {
   ) {
     candySweater.classList.add("sweater-visible");
     candyContainer.classList.add("palette-clicked");
-
+//vai šo visu var izdarīt kā īsāk un gudrāk? :D pārrakstīju daudzreiz to pašu, bet ja tas jādara ar 100 džemperiem.. :D 
     forestContainer.classList.add("hidden");
     berriesContainer.classList.add("hidden");
     oceanContainer.classList.add("hidden");
