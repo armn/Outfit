@@ -1,0 +1,249 @@
+* {
+  font-family: "Noto Sans SC", sans-serif;
+  overflow-y: hidden;
+}
+
+header {
+  text-align: center;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: fit-content;
+  border: 1px solid gray;
+  margin-left: 15px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.box-container:hover {
+  transform: scale(1.1);
+}
+
+h1,
+h2 {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+}
+
+h3 {
+  width: 70px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.box {
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.color-box-container {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.candy-1 {
+  background: pink;
+}
+
+.candy-2 {
+  background: lightskyblue;
+}
+
+.candy-3 {
+  background: lightgreen;
+}
+
+.forest-1 {
+  background: green;
+}
+
+.forest-2 {
+  background: lightgray;
+}
+
+.forest-3 {
+  background: rgb(77, 51, 13);
+}
+
+.berries-1 {
+  background: palevioletred;
+}
+
+.berries-2 {
+  background: rgb(172, 10, 10);
+}
+
+.berries-3 {
+  background: purple;
+}
+
+.ocean-1 {
+  background: teal;
+}
+
+.ocean-2 {
+  background: sandybrown;
+}
+
+.ocean-3 {
+  background: bisque;
+}
+
+.honey-1 {
+  background: gold;
+}
+.honey-2 {
+  background: rgba(107, 57, 0, 0.966);
+}
+.honey-3 {
+  background: rgb(236, 224, 184);
+}
+
+.space-1 {
+  background: rgb(0, 0, 170);
+}
+.space-2 {
+  background: rgb(218, 216, 216);
+}
+.space-3 {
+  background: rgb(5, 17, 36);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.palette-clicked {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: fit-content;
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  border: none;
+  margin: 10px;
+  cursor: initial;
+  animation-name: palette-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.sweater-visible {
+  visibility: visible;
+  height: 400px;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  animation-name: sweater-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.sweater-done {
+  animation-name: sweater-done;
+  animation-duration: 2s;
+}
+
+@keyframes sweater-done {
+  100% {
+    height: 300px;
+    position: absolute;
+    top: 40vh;
+    left: 40vw;
+  }
+}
+
+.hat-img {
+  width: 300px;
+  position: absolute;
+  right: 0%;
+  animation-name: hat-animation;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+button {
+  font-size: 18px;
+}
+.btns {
+  visibility: hidden;
+  margin-top: 30px;
+}
+
+#btn-select {
+  position: fixed;
+  top: 70%;
+  left: 60%;
+  width: 150px;
+}
+
+.btns-after {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 70px;
+  visibility: visible;
+  position: fixed;
+  top: 85%;
+  left: 1%;
+  margin-top: 30px;
+  animation-name: button-animation;
+  animation-duration: 3s;
+}
+
+#btn-done {
+  position: fixed;
+  top: 85%;
+  right: 5%;
+  font-size: 20px;
+}
+
+@keyframes palette-animation {
+  0% {
+  }
+
+  100% {
+    transform: scale(2) rotate(90deg);
+  }
+}
+
+@keyframes sweater-animation {
+  0% {
+    top: 20%;
+    left: 0%;
+  }
+
+  100% {
+    top: 20%;
+    left: 20%;
+  }
+}
+
+@keyframes button-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hat-animation {
+  0% {
+    top: 20%;
+    right: -10%;
+  }
+  100% {
+    top: 20%;
+    right: 23%;
+  }
+}
