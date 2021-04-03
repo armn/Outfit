@@ -1,134 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
 
-    <title>Sweaters</title>
-  </head>
-  <body>
-    <header>
-      <h1>Your Outfit</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
 
-    <main>
-      
-        <div class="select container">
-          <h2 class="select-text"></h2>
-          <div class="box-container candy-container">
-            <h3>Candy</h3>
-            <div class="color-box-container">
-              <div class="box candy-box candy-1"></div>
-              <div class="box candy-box candy-2"></div>
-              <div class="box candy-box candy-3"></div>
-            </div>
-          </div>
-          <div class="box-container forest-container">
-            <h3>Forest</h3>
-          <div class="color-box-container">
-              <div class="box forest-1"></div>
-              <div class="box forest-2"></div>
-              <div class="box forest-3"></div>
-            </div>
-          </div>
+  <title>Sweaters</title>
+</head>
 
-          <div class="box-container berries-container">
-            <h3>Berries</h3>
-            <div class="color-box-container">
-              <div class="box berries-1"></div>
-              <div class="box berries-2"></div>
-              <div class="box berries-3"></div>
-            </div>
-          </div>
-          <div class="box-container ocean-container">
-            <h3>Ocean</h3>
-            <div class="color-box-container">
-              <div class="box ocean-1"></div>
-              <div class="box ocean-2"></div>
-              <div class="box ocean-3"></div>
-            </div>
-          </div>
-          <div class="box-container honey-container">
-              <h3>Honey</h3>
-              <div class="color-box-container">
-                <div class="box honey-1"></div>
-                <div class="box honey-2"></div>
-                <div class="box honey-3"></div>
-              </div>
-            </div>
-            <div class="box-container space-container">
-              <h3>Space</h3>
-              <div class="color-box-container">
-                <div class="box space-1"></div>
-                <div class="box space-2"></div>
-                <div class="box space-3"></div>
-              </div>
-            </div>
+<body>
+  <header>
+    <h1>Your Outfit</h1>
+  </header>
 
+  <main>
 
-        <div class="output container">
-          <div>
-            <img
-            class="hidden"
-              id="candy"
-              src="https://i.pinimg.com/564x/fa/f7/88/faf78826b37457f885befa44227e01eb.jpg"
-            />
-          </div>
-          <div>
-            <img
-            class="hidden"
-              id="forest"
-              src="https://i.pinimg.com/564x/e2/4f/d0/e24fd04343398073ae56e34c3e2f31f5.jpg"
-            />
-          </div>
-          <div>
-            <img
-            class="hidden"
-              id="berries"
-              src="https://i.pinimg.com/564x/49/c0/2e/49c02eb57cc973bed8fea58508a2b4e2.jpg"
-            />
-          </div>
-          <div>
-            <img
-            class="hidden"
-              id="ocean"
-              src="https://i.pinimg.com/564x/2b/42/8f/2b428f276e05b9f60569e004597c3280.jpg"
-            />
-          </div>
-          <div>
-              <img class="hidden" id="honey" src="https://i.pinimg.com/564x/6b/2e/65/6b2e65fe82f0b341adba3164d236fca4.jpg">
-          </div>
-          <div>
-              <img class="hidden" id="space" src="https://i.pinimg.com/564x/c7/be/3c/c7be3cc32904ac14bd1c1b1c6ab0509b.jpg">
-          </div>
+    <div class="select container">
+      <h2 class="select-text"></h2>
+      <div class="box-container candy-container" data-sweater="candy">
+        <h3>Candy</h3>
+        <div class="color-box-container">
+          <div class="box candy-box candy-1"></div>
+          <div class="box candy-box candy-2"></div>
+          <div class="box candy-box candy-3"></div>
         </div>
-      
+      </div>
+      <div class="box-container forest-container" data-sweater="forest">
+        <h3>Forest</h3>
+        <div class="color-box-container">
+          <div class="box forest-1"></div>
+          <div class="box forest-2"></div>
+          <div class="box forest-3"></div>
+        </div>
+      </div>
+
+      <div class="box-container berries-container" data-sweater="berries">
+        <h3>Berries</h3>
+        <div class="color-box-container">
+          <div class="box berries-1"></div>
+          <div class="box berries-2"></div>
+          <div class="box berries-3"></div>
+        </div>
+      </div>
+      <div class="box-container ocean-container" data-sweater="ocean">
+        <h3>Ocean</h3>
+        <div class="color-box-container">
+          <div class="box ocean-1"></div>
+          <div class="box ocean-2"></div>
+          <div class="box ocean-3"></div>
+        </div>
+      </div>
+      <div class="box-container honey-container" data-sweater="honey">
+        <h3>Honey</h3>
+        <div class="color-box-container">
+          <div class="box honey-1"></div>
+          <div class="box honey-2"></div>
+          <div class="box honey-3"></div>
+        </div>
+      </div>
+      <div class="box-container space-container" data-sweater="space">
+        <h3>Space</h3>
+        <div class="color-box-container">
+          <div class="box space-1"></div>
+          <div class="box space-2"></div>
+          <div class="box space-3"></div>
+        </div>
+      </div>
+
+
+      <div class="output container">
+        <div>
+          <img class="hidden" id="candy"
+            src="https://i.pinimg.com/564x/fa/f7/88/faf78826b37457f885befa44227e01eb.jpg" />
+        </div>
+        <div>
+          <img class="hidden" id="forest"
+            src="https://i.pinimg.com/564x/e2/4f/d0/e24fd04343398073ae56e34c3e2f31f5.jpg" />
+        </div>
+        <div>
+          <img class="hidden" id="berries"
+            src="https://i.pinimg.com/564x/49/c0/2e/49c02eb57cc973bed8fea58508a2b4e2.jpg" />
+        </div>
+        <div>
+          <img class="hidden" id="ocean"
+            src="https://i.pinimg.com/564x/2b/42/8f/2b428f276e05b9f60569e004597c3280.jpg" />
+        </div>
+        <div>
+          <img class="hidden" id="honey" src="https://i.pinimg.com/564x/6b/2e/65/6b2e65fe82f0b341adba3164d236fca4.jpg">
+        </div>
+        <div>
+          <img class="hidden" id="space" src="https://i.pinimg.com/564x/c7/be/3c/c7be3cc32904ac14bd1c1b1c6ab0509b.jpg">
+        </div>
+      </div>
+
 
       <div class="random-hat container">
         <h2 class="select-text2"></h2>
         <img class="hat-img">
         <button id="btn-select">Show more</button>
       </div>
-   
-
-   
-        <div class="btns">
-            <button id="btn-return">I changed my mind</button>
-            <button id="btn-next">It's good! Next</button>
-
-        </div>
-
-        <div class="done container">
-          <button id="btn-done"></button>
-        </div>
-    
 
 
-    <script src="script.js"></script>
-    
-  </body>
+
+      <div class="btns">
+        <button id="btn-return">I changed my mind</button>
+        <button id="btn-next">It's good! Next</button>
+
+      </div>
+
+      <div class="done container">
+        <button id="btn-done"></button>
+      </div>
+
+
+
+      <script src="script.js"></script>
+
+</body>
+
 </html>

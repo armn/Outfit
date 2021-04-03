@@ -65,101 +65,23 @@ let text2 = document.querySelector(".select-text2");
 text2.innerText = "";
 
 //Uzklikšķina uz krāsu paletes, nomainās css klases, parādās return/next btns
-function showSweater(event) {
-  const target = event.target;
-  const parent = target.parentElement;
-  const mainParent = parent.parentElement;
+function showSweater(event, container) {
+  console.log(container);
 
-  if (
-    parent == candyContainer ||
-    target == candyContainer ||
-    mainParent == candyContainer
-  ) {
-    candySweater.classList.add("sweater-visible");
-    candyContainer.classList.add("palette-clicked");
-//vai šo visu var izdarīt kā īsāk un gudrāk? :D pārrakstīju daudzreiz to pašu, bet ja tas jādara ar 100 džemperiem.. :D 
-    forestContainer.classList.add("hidden");
-    berriesContainer.classList.add("hidden");
-    oceanContainer.classList.add("hidden");
-    honeyContainer.classList.add("hidden");
-    spaceContainer.classList.add("hidden");
-    text.innerText = "";
-  }
-  if (
-    parent == forestContainer ||
-    target == forestContainer ||
-    mainParent == forestContainer
-  ) {
-    forestSweater.classList.add("sweater-visible");
-    forestContainer.classList.add("palette-clicked");
+  const sweater = container.getAttribute("data-sweater");
+  const sweaters = document.querySelectorAll(".box-container");
 
-    candyContainer.classList.add("hidden");
-    berriesContainer.classList.add("hidden");
-    oceanContainer.classList.add("hidden");
-    honeyContainer.classList.add("hidden");
-    spaceContainer.classList.add("hidden");
-    text.innerText = "";
-  }
-  if (
-    parent == berriesContainer ||
-    target == berriesContainer ||
-    mainParent == berriesContainer
-  ) {
-    berriesSweater.classList.add("sweater-visible");
-    berriesContainer.classList.add("palette-clicked");
+  sweaters.forEach((sw) => {
+    sw.classList.add("hidden");
+  });
 
-    candyContainer.classList.add("hidden");
-    forestContainer.classList.add("hidden");
-    oceanContainer.classList.add("hidden");
-    honeyContainer.classList.add("hidden");
-    spaceContainer.classList.add("hidden");
-    text.innerText = "";
-  }
-  if (
-    parent == oceanContainer ||
-    target == oceanContainer ||
-    mainParent == oceanContainer
-  ) {
-    oceanSweater.classList.add("sweater-visible");
-    oceanContainer.classList.add("palette-clicked");
+  document.querySelector(`#${sweater}`).classList.add("sweater-visible");
+  document
+    .querySelector(`.${sweater}-container`)
+    .classList.add("palette-clicked");
 
-    candyContainer.classList.add("hidden");
-    forestContainer.classList.add("hidden");
-    berriesContainer.classList.add("hidden");
-    honeyContainer.classList.add("hidden");
-    spaceContainer.classList.add("hidden");
-    text.innerText = "";
-  }
-  if (
-    parent == honeyContainer ||
-    target == honeyContainer ||
-    mainParent == honeyContainer
-  ) {
-    honeySweater.classList.add("sweater-visible");
-    honeyContainer.classList.add("palette-clicked");
+  text.innerText = "";
 
-    candyContainer.classList.add("hidden");
-    forestContainer.classList.add("hidden");
-    berriesContainer.classList.add("hidden");
-    oceanContainer.classList.add("hidden");
-    spaceContainer.classList.add("hidden");
-    text.innerText = "";
-  }
-  if (
-    parent == spaceContainer ||
-    target == spaceContainer ||
-    mainParent == spaceContainer
-  ) {
-    spaceSweater.classList.add("sweater-visible");
-    spaceContainer.classList.add("palette-clicked");
-
-    candyContainer.classList.add("hidden");
-    forestContainer.classList.add("hidden");
-    berriesContainer.classList.add("hidden");
-    oceanContainer.classList.add("hidden");
-    honeyContainer.classList.add("hidden");
-    text.innerText = "";
-  }
   //return/next btns
   buttonContainer.classList.add("btns-after");
 }
@@ -209,9 +131,13 @@ function showResult() {
   }
 }
 
-containerList.forEach((container) =>
-  container.addEventListener("click", showSweater)
-);
+containerList.forEach((container) => {
+  container.addEventListener("click", (event) => {
+    console.log(container);
+
+    showSweater(event, container);
+  });
+});
 
 returnButton.addEventListener("click", clearChoice);
 nextButton.addEventListener("click", showNext);
